@@ -3,32 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Hello-React</title>
-    <!--подключение реакта-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-with-addons.js"></script>
-    <!--подключение виртуального дом дерева-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
 </head>
 <body>
-<script>
-    /*
-    * создается параметр ReactElement типа h1
-    * записывающий в дочерний элемент строку 'Hello React' пример: React.createElement('h1', null, 'Hello React');
-    * далее параметр ReactElement передается в первом аргументе методу ReactDOM.render()
-    * как показано ниже React.createElement('h1', null, 'Hello React'), document.body);
-    * Метод render принимает в первом аргументе параметр ReactElement, DOM-елемент document.body - во втором,
-    * вставляет разметку html, генерируемую первым элементом ReactElement, как дочерний элемент во второй аргумент document.body
-    * */
-    var HelloReact = React.createClass({
-        render: function () {
-            return React.DOM.h1(null, 'Hello React');
-        }
-    });
-    ReactDOM.render(React.createElement(HelloReact), document.body);
+    <div id = "root" style="text-align: center;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-with-addons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
 
-    /* Еще можно так по короче.
-    ReactDOM.render(
-        React.createElement('h1', null, 'Hello React'), document.body);
-    */
-</script>
+    <script src="js/app.js"></script>
 </body>
 </html>
